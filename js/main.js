@@ -23,7 +23,7 @@ function downloadResumeAsPDF() {
   };
 
   html2pdf().from(element).set(opt).save();
-}));
+});
 
 let counter = 0;
 const downloadCountElement = document.querySelector('#download-count');
