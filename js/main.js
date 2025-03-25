@@ -12,6 +12,7 @@ document.querySelectorAll('.editable').forEach(element => {
 });
 
 function downloadResumeAsPDF() {
+  document.getElementById("download-btn").addEventListener("click", () => {
   const element = document.querySelector('.resume-container');
   const opt = {
     margin: 10,
@@ -22,7 +23,7 @@ function downloadResumeAsPDF() {
   };
 
   html2pdf().from(element).set(opt).save();
-}
+}));
 
 let counter = 0;
 const downloadCountElement = document.querySelector('#download-count');
